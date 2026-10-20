@@ -24,7 +24,7 @@ Contributors: add your skill proposal below using the entry template. Once appro
 | **Skill Name** | `bc-isolated-storage-generator` |
 | **Short Description** | Generates secure isolated storage patterns for Business Central extensions, including encryption/decryption helpers, secret management, and credential storage implementations following Microsoft security best practices. |
 | **Target BC Version** _(optional)_ | 28.1 |
-| **Status** | 🔵 In Development |
+| **Status** | ✅ Merged |
 
 #### Author
 
@@ -52,7 +52,7 @@ Many AL extensions require secure storage of sensitive data like API keys, authe
 | **Skill Name** | `bc-approval-workflow-generator` |
 | **Short Description** | Generates complete approval workflow implementation for custom tables in Business Central, including workflow templates, event subscriptions, approval entries integration, user setup validation, approval actions on pages, notification handling, and delegation logic following standard BC approval patterns. |
 | **Target BC Version** _(optional)_ | 28.1 |
-| **Status** | 🔵 In Development |
+| **Status** | ✅ Merged |
 
 #### Author
 
@@ -73,6 +73,114 @@ Custom document tables (like custom purchase requisitions, expense reports, or c
 
 <!-- END OF SKILL ENTRY — copy from ### to --- for additional entries -->
 
+### `skill-contribution-assistant`
+
+| Field | Details |
+|---|---|
+| **Skill Name** | `skill-contribution-assistant` |
+| **Short Description** | Guides contributors to design, refine, and submit high-quality skills for AL Copilot Skill Collection, including onboarding questions, non-intrusive opportunity detection, quality gates, and PR-readiness checks. |
+| **Target BC Version** _(optional)_ | 28.1 |
+| **Status** | ✅ Merged |
+
+#### Author
+
+- **Full Name**: Alex Polo
+- **GitHub User**: AlexP0lo
+- **GitHub Profile**: https://github.com/AlexP0lo
+- **LinkedIn Profile**: https://www.linkedin.com/in/alex-polo-garrido-49343b140
+
+#### Co-Authors _(optional)_
+
+<!-- Add co-authors using the format below -->
+
+#### Motivation
+
+The collection can scale faster if contributors receive a practical assistant that converts real user needs into reusable, review-ready skills. This skill reduces rework by standardizing onboarding, scope framing, anonymization, repository compliance, and release-plan integration.
+
+---
+### `onprem-remote-deploy`
+| Field | Details |
+|---|---|
+| **Skill Name** | `onprem-remote-deploy` |
+| **Short Description** | Deploys AL apps to remote Business Central OnPrem servers from VS Code using WinRM, SSH, SMB, or RDP tsclient-pull strategies with fallback guidance for restricted networks. |
+| **Target BC Version** _(optional)_ | 28.1 |
+| **Status** | ✅ Merged |
+
+#### Author
+
+- **Full Name**: Alex Polo
+- **GitHub User**: AlexP0lo
+- **GitHub Profile**: https://github.com/AlexP0lo
+- **LinkedIn Profile**: https://www.linkedin.com/in/alex-polo-garrido-49343b140
+
+#### Co-Authors _(optional)_
+
+<!-- Add co-authors using the format below -->
+
+
+Many projects need repeatable AL deployment automation to on-premises Business Central servers where direct connectivity is partially or fully blocked. This skill provides a practical decision matrix and implementation patterns so teams can deploy reliably across different network/security constraints.
+
+---
+
+<!-- END OF SKILL ENTRY — copy from ### to --- for additional entries -->
+
+
+### `bc-reports`
+
+| Skill Name | bc-reports |
+|---|---|
+| Short Description | Standards and guardrails for authoring Business Central reports in AL and RDLC. Covers report object structure, DataItem hierarchy, RDLC sizing, SetData/GetData index management, body width validation, and rendering best practices. |
+| Target BC Version (optional) | 28.1 |
+| Status | ✅ Merged |
+
+#### Author
+
+- Full Name: Carlos Perez
+- GitHub User: cperezsx
+- GitHub Profile: https://github.com/cperezsx
+- LinkedIn Profile: https://www.linkedin.com/in/cperezsx/
+
+#### Co-Authors (optional)
+
+- Full Name: Jose Miguel Dura
+- GitHub User: JMDura
+- GitHub Profile: https://github.com/JMDura
+- LinkedIn Profile: https://www.linkedin.com/in/jose-miguel-dur%C3%A1-sirvent/
+
+#### Motivation
+
+AL report objects and RDLC layouts have many subtle requirements (DataItemLink, SetData index order, body width constraints, PageHeader/Footer sizing) that are easy to get wrong and hard to debug. This skill enforces correct patterns before code reaches review, reducing rework and rendering failures.
+
+---
+
+
+### `bc-field-propagation`
+
+| Skill Name | bc-field-propagation |
+|---|---|
+| Short Description | Propagates custom fields from source documents and journal lines to posted documents, archived documents, and ledger entries. Selects Pattern A (TransferFields - zero code) or Pattern B (EventSubscriber with dedicated codeunit per module) based on whether the posting codeunit uses TransferFields. |
+| Target BC Version (optional) | 28.1 |
+| Status | ✅ Merged |
+
+#### Author
+
+- Full Name: Carlos Perez
+- GitHub User: cperezsx
+- GitHub Profile: https://github.com/cperezsx
+- LinkedIn Profile: https://www.linkedin.com/in/cperezsx/
+
+#### Co-Authors (optional)
+
+- Full Name: Jose Miguel Dura
+- GitHub User: JMDura
+- GitHub Profile: https://github.com/JMDura
+- LinkedIn Profile: https://www.linkedin.com/in/jose-miguel-dur%C3%A1-sirvent/
+
+#### Motivation
+
+Custom fields added to Sales, Purchase, Transfer, or journal source tables often need to propagate to all posted documents, archive copies, and ledger entries. Getting the pattern wrong - using a manual EventSubscriber when TransferFields already covers the field, or using different Field IDs on source and target - causes data inconsistency and maintenance debt. This skill enforces the correct pattern based on how the BC posting codeunit works, and provides a complete event catalog for all major posting chains.
+
+---
 ### `{skill-folder-name}`
 
 | Field | Details |
@@ -121,5 +229,8 @@ _{Brief explanation of why this skill is needed and what problem it solves}_
 
 | Skill | Author | Status |
 |---|---|---|
-| bc-isolated-storage-generator | @fernandoartalf | 🔵 In Development |
-| bc-approval-workflow-generator | @fernandoartalf | 🔵 In Development |
+| bc-isolated-storage-generator | @fernandoartalf | ✅ Merged |
+| bc-approval-workflow-generator | @fernandoartalf | ✅ Merged |
+| skill-contribution-assistant | @AlexP0lo | ✅ Merged |
+| onprem-remote-deploy | @AlexP0lo | ✅ Merged |
+| bc-reports | @cperezsx | ✅ Merged |
